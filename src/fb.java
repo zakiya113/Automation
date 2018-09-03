@@ -12,7 +12,7 @@ public class fb {
 	WebDriver driver= new ChromeDriver();
 	   
 	driver.manage().window().maximize();
-	driver.get("http://demo.guru99.com");
+	driver.get("https://www.facebook.com/");
 	driver.close();
  }
 
