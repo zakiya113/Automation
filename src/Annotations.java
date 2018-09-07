@@ -112,13 +112,10 @@ import org.testng.annotations.Test;
 			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 			driver.findElement(By.xpath("//tbody//tr[1]//td[1]//div[2]//p[1]//button[1]")).click();
 			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-			driver.findElement(By.xpath("")).click();
-			
-			
 			
 		}
 		
-        @Test 
+        @Test (priority=2)
         public void bookasguest() {
         	driver.findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys("Mickey");
         	driver.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys("Mouse");
@@ -129,6 +126,21 @@ import org.testng.annotations.Test;
         	driver.findElement(By.xpath("//a[@class='select2-choice']")).sendKeys("India");
         	//driver.findElement(By.xpath("//a[@class='select2-choice']")).sendKeys();
         	driver.findElement(By.xpath("//button[@name='guest']")).click();
+       
         }
+        
+        @Test(enabled=false)
+        public void skipsignin() {
+        	driver.findElement(By.xpath("//a[@id='signintab']")).click();
+        	driver.findElement(By.xpath("//input[@id='username']")).sendKeys("abc@gmail.com");
+        	driver.findElement(By.xpath("//input[@id='password']")).sendKeys("12345");
+        	driver.findElement(By.xpath("//button[@name='login']")).click();
+        	
+        	
+        }
+        
+        
+        
+        
         
 }
