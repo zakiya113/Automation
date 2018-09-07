@@ -14,7 +14,10 @@ public class NewTest {
  public void testCase1() {
   System.out.println("This is the Test Case 1");
  }
-
+ @Test(enabled=false) 
+ public void skiptest() {
+  System.out.println("This is skipped testcase");
+ }
  @Test
  public void testCase2() {
   System.out.println("This is the Test Case 2");
